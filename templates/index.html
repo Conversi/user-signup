@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/" method='POST'>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="username">Username</label>
+        </td>
+        <td>
+            <input name="username" type="text" />
+            <span class="error">That's not a valid username</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="password">Password</label>
+        </td>
+        <td>
+          <input name="password" type="password" >
+          <span class="error">That's not a valid password</span> 
+        </td>
+        </tr>
+      <tr>
+        <td>
+          <label for="verify">Verify Password</label>
+        </td>
+        <td>
+          <input name="verify" type="password">
+          <span class="error">Passwords don't match</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="email">Eamil (optional)</label>
+        </td>
+        <td>
+          <input name="email" />
+          <span class="error">That is not a valid email</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="submit" />
+</form>
+{% endblock %}
